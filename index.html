@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08080c">
+
+    <title>Watch All Videos - Download APK</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <div class="top-badge">
+            🔥 LATEST VERSION AVAILABLE
+        </div>
+
+        <section class="download-card">
+
+            <div class="poster-wrapper">
+                <img
+                    src="poster.jpg"
+                    alt="Watch All Videos App"
+                    class="poster"
+                >
+            </div>
+
+            <h1 id="appName">
+                Watch All Videos
+            </h1>
+
+            <h2>
+                Watch Everything in One Place
+            </h2>
+
+            <p id="appDescription" class="description">
+                Download the latest APK and enjoy watching all
+                available videos from your Android device.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>▶️</span>
+                    <p>Watch Videos</p>
+                </div>
+
+                <div class="feature">
+                    <span>⚡</span>
+                    <p>Fast Access</p>
+                </div>
+
+                <div class="feature">
+                    <span>📱</span>
+                    <p>Android App</p>
+                </div>
+
+            </div>
+
+            <div class="version-box">
+                <span>Current Version</span>
+                <strong id="appVersion">
+                    Latest Version
+                </strong>
+            </div>
+
+            <a
+                id="downloadButton"
+                class="download-button"
+                href="#"
+                download
+            >
+                <span>⬇️</span>
+                <span>
+                    DOWNLOAD APK
+                    <small>Latest Version</small>
+                </span>
+            </a>
+
+            <a
+                id="telegramButton"
+                class="telegram-button"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ✈️ JOIN TELEGRAM
+            </a>
+
+            <div class="trust">
+                🔒 Fast & Easy Download
+            </div>
+
+        </section>
+
+        <footer>
+            © <span id="year"></span>
+            <span id="footerName">Watch All Videos</span>
+        </footer>
+
+    </main>
+
+    <script src="config.js"></script>
+
+    <script>
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        if (typeof APP_CONFIG !== "undefined") {
+
+            if (APP_CONFIG.appName) {
+                document.getElementById("appName").textContent =
+                    APP_CONFIG.appName;
+
+                document.getElementById("footerName").textContent =
+                    APP_CONFIG.appName;
+
+                document.title =
+                    APP_CONFIG.appName + " - Download APK";
+            }
+
+            if (APP_CONFIG.description) {
+                document.getElementById("appDescription").textContent =
+                    APP_CONFIG.description;
+            }
+
+            if (APP_CONFIG.version) {
+                document.getElementById("appVersion").textContent =
+                    APP_CONFIG.version;
+            }
+
+            if (APP_CONFIG.apkUrl) {
+                document.getElementById("downloadButton").href =
+                    APP_CONFIG.apkUrl;
+            }
+
+            if (APP_CONFIG.telegramUrl) {
+                document.getElementById("telegramButton").href =
+                    APP_CONFIG.telegramUrl;
+            } else {
+                document.getElementById("telegramButton").style.display =
+                    "none";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
