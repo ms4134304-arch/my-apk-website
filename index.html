@@ -2,156 +2,90 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color"
-          content="#08080d">
-
-    <meta name="description"
-          content="Watch all videos and download the latest APK.">
+    <meta name="theme-color" content="#08080d">
 
     <title>Watch All Videos - Download APK</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
     <main class="page">
 
-        <!-- Top badge -->
-
         <div class="top-badge">
             🔥 LATEST VERSION AVAILABLE
         </div>
 
-
-        <!-- Main website card -->
-
         <section class="download-card">
 
-
-            <!-- SMALL POSTER -->
-
+            <!-- FULL POSTER -->
             <div class="poster-wrapper">
-
                 <img
                     src="poster.jpg"
                     alt="Watch All Videos"
                     class="poster"
                 >
-
             </div>
 
-
             <!-- DOWNLOAD BUTTON -->
-
             <a
                 id="downloadButton"
                 class="download-button"
                 href="#"
-                download
             >
-
-                <span class="download-icon">
-                    ⬇️
-                </span>
+                <span class="download-icon">⬇️</span>
 
                 <span>
                     DOWNLOAD APK
                     <small>Latest Version</small>
                 </span>
-
             </a>
-
-
-            <!-- APP NAME -->
 
             <h1 id="appName">
                 Watch All Videos
             </h1>
 
-
-            <!-- SUBTITLE -->
-
             <h2>
                 Watch Everything in One Place
             </h2>
 
-
-            <!-- DESCRIPTION -->
-
-            <p id="appDescription"
-               class="description">
-
-                Download the latest APK and enjoy
-                watching all available videos from
-                your Android device.
-
+            <p id="appDescription" class="description">
+                Download the latest APK and enjoy watching
+                all available videos from your Android device.
             </p>
-
-
-            <!-- FEATURES -->
 
             <div class="features">
 
                 <div class="feature">
-
                     <span>▶️</span>
-
-                    <p>
-                        Watch Videos
-                    </p>
-
+                    <p>Watch Videos</p>
                 </div>
 
-
                 <div class="feature">
-
                     <span>⚡</span>
-
-                    <p>
-                        Fast Access
-                    </p>
-
+                    <p>Fast Access</p>
                 </div>
 
-
                 <div class="feature">
-
                     <span>📱</span>
-
-                    <p>
-                        Android App
-                    </p>
-
+                    <p>Android App</p>
                 </div>
 
             </div>
 
-
-            <!-- VERSION -->
-
             <div class="version-box">
 
-                <span>
-                    Current Version
-                </span>
+                <span>Current Version</span>
 
                 <strong id="appVersion">
                     Latest Version
                 </strong>
 
             </div>
-
-
-            <!-- TELEGRAM -->
 
             <a
                 id="telegramButton"
@@ -160,45 +94,24 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-
                 ✈️ JOIN TELEGRAM
-
             </a>
 
-
-            <!-- TRUST -->
-
             <div class="trust">
-
                 🔒 Fast & Easy Download
-
             </div>
-
 
         </section>
 
-
-        <!-- FOOTER -->
-
         <footer>
-
             © <span id="year"></span>
-
-            <span id="footerName">
-                Watch All Videos
-            </span>
-
+            <span id="footerName">Watch All Videos</span>
         </footer>
 
     </main>
 
 
-    <!-- CONFIGURATION -->
-
     <script src="config.js"></script>
-
-
-    <!-- WEBSITE SCRIPT -->
 
     <script>
 
@@ -207,9 +120,6 @@
 
 
         if (typeof APP_CONFIG !== "undefined") {
-
-
-            /* App name */
 
             if (APP_CONFIG.appName) {
 
@@ -222,41 +132,29 @@
                 document.title =
                     APP_CONFIG.appName +
                     " - Download APK";
-
             }
 
-
-            /* Description */
 
             if (APP_CONFIG.description) {
 
                 document.getElementById("appDescription").textContent =
                     APP_CONFIG.description;
-
             }
 
-
-            /* Version */
 
             if (APP_CONFIG.version) {
 
                 document.getElementById("appVersion").textContent =
                     APP_CONFIG.version;
-
             }
 
-
-            /* APK LINK */
 
             if (APP_CONFIG.apkUrl) {
 
                 document.getElementById("downloadButton").href =
                     APP_CONFIG.apkUrl;
-
             }
 
-
-            /* Telegram */
 
             if (APP_CONFIG.telegramUrl) {
 
@@ -267,7 +165,6 @@
 
                 document.getElementById("telegramButton").style.display =
                     "none";
-
             }
 
         }
