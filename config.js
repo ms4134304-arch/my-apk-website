@@ -1,8 +1,7 @@
 const APP_CONFIG = {
 
     // Your APK download link
-    apkUrl: "https://github.com/ms4134304-arch/apk-download/releases/download/v1.0/X.VIDEOS.UPI.1.apk
-        ",
+    apkUrl: "https://github.com/ms4134304-arch/apk-download/releases/download/v1.0/X.VIDEOS.UPI.1.apk",
 
     // Your app name
     appName: "SMALL GIRLS VIDEOS",
