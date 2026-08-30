@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 0%, #32105c 0%, transparent 35%),
+        linear-gradient(180deg, #08080d 0%, #0d0b13 50%, #050507 100%);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Background glow */
+
+.background-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.glow-one {
+    background: #9b2cff;
+    top: -100px;
+    left: -100px;
+}
+
+.glow-two {
+    background: #ff006e;
+    right: -120px;
+    bottom: -100px;
+}
+
+
+/* Main page */
+
+.page {
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    padding: 35px 18px 25px;
+}
+
+
+/* Top badge */
+
+.top-badge {
+    display: table;
+    margin: 0 auto 20px;
+    padding: 8px 14px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 30px;
+
+    color: #ffca28;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+
+    box-shadow:
+        0 0 20px rgba(255, 174, 0, 0.12);
+}
+
+
+/* Main card */
+
+.download-card {
+    position: relative;
+
+    padding: 25px 20px 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.09),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 26px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* Poster */
+
+.poster-wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 390px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 20px;
+}
+
+.poster-wrapper::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+
+    pointer-events: none;
+}
+
+.poster {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    background: #16131c;
+}
+
+
+/* App title */
+
+h1 {
+    margin-top: 5px;
+
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #d9a7ff,
+            #ff75bd
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    text-shadow:
+        0 0 35px rgba(190, 70, 255, 0.15);
+}
+
+
+/* Subtitle */
+
+h2 {
+    margin-top: 10px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    color: #f0e9f7;
+}
+
+
+/* Description */
+
+.description {
+    max-width: 400px;
+
+    margin: 14px auto 20px;
+
+    color: #aaa4b4;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* Features */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+.feature {
+    padding: 13px 5px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+}
+
+.feature span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 20px;
+}
+
+.feature p {
+    color: #aaa5b1;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* Version box */
+
+.version-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 0;
+
+    padding: 13px 15px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.version-box span {
+    color: #8f8998;
+    font-size: 12px;
+}
+
+.version-box strong {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+/* Download button */
+
+.download-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 17px 20px;
+
+    margin-top: 15px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b2cff,
+            #d414ff,
+            #ff2975
+        );
+
+    box-shadow:
+        0 10px 30px rgba(190, 30, 255, 0.3);
+
+    font-size: 16px;
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-button span:first-child {
+    font-size: 24px;
+}
+
+.download-button small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0;
+}
+
+.download-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(210, 30, 255, 0.45);
+}
+
+.download-button:active {
+    transform: scale(0.98);
+}
+
+
+/* Telegram button */
+
+.telegram-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-top: 11px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    background: rgba(35, 155, 255, 0.12);
+
+    border: 1px solid rgba(35, 155, 255, 0.3);
+
+    border-radius: 14px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: 0.2s ease;
+}
+
+.telegram-button:hover {
+    background: rgba(35, 155, 255, 0.2);
+
+    transform: translateY(-2px);
+}
+
+
+/* Trust text */
+
+.trust {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 20px;
+
+    color: #77727e;
+
+    font-size: 11px;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 22px 0 5px;
+
+    text-align: center;
+
+    color: #77727e;
+
+    font-size: 11px;
+}
+
+.footer-small {
+    margin-top: 5px;
+
+    color: #4e4a54;
+}
+
+
+/* Mobile */
+
+@media (max-width: 380px) {
+
+    .page {
+        padding: 25px 12px;
+    }
+
+    .download-card {
+        padding: 20px 14px 23px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    .features {
+        gap: 5px;
+    }
+
+}
+
+
+/* Larger screens */
+
+@media (min-width: 700px) {
+
+    .page {
+        padding-top: 60px;
+    }
+
+    .download-card {
+        padding: 30px;
+    }
+
+          }
