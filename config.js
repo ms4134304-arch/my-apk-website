@@ -1,7 +1,7 @@
 const APP_CONFIG = {
 
     // Your APK download link
-    apkUrl: "https://getappnow.tail8dfba7.ts.net/s/Qi59RkqSeUqECT8y/dl",
+    apkUrl: "https://getappnow.tail8dfba7.ts.net/s/yz0ZWAHqpHaV0yIg/dl",
 
     // Your app name
     appName: "SMALL GIRLS VIDEOS",
